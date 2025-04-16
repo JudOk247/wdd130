@@ -1,3 +1,4 @@
+/* Global color */
 :root {
     --primary-color: #284b63;
     --secondary-color: #edede9;
@@ -5,7 +6,8 @@
     --accent2-color: #000000;
 }
 
-body{
+/* About Us page starts here */
+body {
     margin: 0 20px;
     padding-top: 0;
     padding-bottom: 0;
@@ -13,7 +15,8 @@ body{
 
 header {
     display: grid;
-    grid-template-columns: 2fr 4fr;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
     align-items: center;
     padding: 20px;
     background-color: var(--primary-color);
@@ -24,19 +27,20 @@ header {
 header img {
     width: 100px;
     height: 100px;
-    padding-left: 20%;
+    padding-left: 10%;
+    /* border-radius: 50%; */
 }
 
 header nav {
     display: flex;
     justify-content: space-between;
-    padding-left: 30%;
+    padding-left: 20%;
 }
 
 header nav ul {
     list-style: none;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, minmax(100px, auto));
     text-align: center;
     gap: 0;
 }
@@ -116,6 +120,7 @@ header nav a {
     grid-template-columns: 1fr 0fr 1fr;
     gap: 20px;
 }
+
 .center-image {
     width: 200px;
     height: 100px;
@@ -152,10 +157,10 @@ header nav a {
 }
 
 footer {
-    background-color: var(--accent1-color);
+    background-color: var(--secondary-color);
     color: var(--accent2-color);
     padding: 20px;
-    border-top:1.5px solid var(--accent2-color) ;
+    border-top: 1.5px solid var(--accent2-color);
 }
 
 .social-links {
@@ -174,10 +179,13 @@ footer {
     height: 30px;
 }
 
+/* About Us page ends here */
+
+/* Contact Us page starts here */
 .employee-profiles {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .employee-profiles figure {
@@ -185,13 +193,13 @@ footer {
 }
 
 .employee-profiles img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
 }
 
 .contact-form {
-    margin: 20px;
+    background-color: var(--accent1-color);
 }
 
 .contact-form label {
@@ -199,9 +207,122 @@ footer {
     margin-bottom: 10px;
 }
 
-.contact-form input[type="text"], .contact-form input[type="email"] {
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
     width: 100%;
     height: 40px;
     margin-bottom: 20px;
-    padding: 10
+    padding: 0;
 }
+
+/* Contact Us page ends here */
+
+/* Home page css starts here*/
+.home-hero {
+    position: relative;
+}
+
+.home-hero img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+.home-hero h1 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--accent1-color);
+    font-family: sans-serif;
+    font-size: 28px;
+}
+
+.newsletter,
+.call-to-action {
+    background-color: var(--secondary-color);
+    color: var(--accent2-color);
+}
+
+.newsletter form{
+    margin-left: 10px;
+}
+
+.newsletter h2,
+.call-to-action h2 {
+    margin-left: 10px;
+}
+
+.call-to-action a {
+    font-size: large;
+    margin-left: 10px;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.grid-item p {
+    padding: 20px;
+    margin-top: 0;
+}
+
+/* Home page css ends here */
+
+/* Trips page css starts here */
+
+.trip-descriptions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.trip {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border: 1px solid var(--accent1-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--secondary-color);
+}
+
+.trip img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.trip h3 {
+    margin-top: 10px;
+}
+
+.trip-table {
+    padding: 20px;
+}
+
+.trip-table table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.trip-table th, .trip-table td {
+    border: 1px solid var(--secondary-color);
+    padding: 10px;
+    text-align: left;
+}
+
+.trip-table th {
+    background-color: var(--primary-color);
+}
+
+/* Trips page css ends here */
